@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>サンプル</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stylesheets/application.scss">
+<style>
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+</style>
+<script src="https://kit.fontawesome.com/341e580b4c.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script>
+$(function(){
+  $(".headC").click(function(){
+    $(".headB").slideToggle();
+  });
+});
+</script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="container-small">
+        <%= link_to "LOGGER", "#", class: "headA"%>
+        <button type="button" class="headC">
+          <span class="fa fa-bars" title="MENU"></span>
+        </button>
+      </div>
+      <nav class="headB">
+        <ul>
+          <li><%= link_to "TOP", "#" %></li>
+          <li><%= link_to "CONTENTS", contents_top_index_path %></li>
+          <li><%= link_to "ABOUT", "#" %></li>
+          <li><%= link_to "CONTACT", "#" %></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="conA">
+    <div class="contaniner">
+      <%= image_tag "logo.svg" %>
+      <h1>LOGGER</h1>
+      <p>美味しく楽しくライフログ</p>
+      <%= link_to "ライフログを始める","#" %>
+    </div>
+  </section>
+  <section class = "conB">
+    <div class="container">
+      <div class="text">
+        <span class= "fa fa-bar-chart icon"></span>
+        <h2>ライフログって何？</h2>
+        <p>日常のあれこれを記録していくライフログ。いろいろなものが見えてきます</p>
+        <%= link_to "#" do%>
+          MORE...
+          <span class="fa fa-chevron-right"></span>
+        <% end %>
+      </div>
+      <div class="text">
+        <span class= "fa fa-gears icon"></span>
+        <h2>必要なのはスマホだけ</h2>
+        <p>ライフログを始めるのに必要なのはスマホだけ。いつでもスタートできます。</p>
+        <%= link_to "#" do%>
+          MORE... 
+          <span class="fa fa-chevron-right"></span>
+        <% end %>
+      </div>
+      <div class="text">
+        <span class= "fa fa-rocket icon"></span>
+        <h2>SNSとの連携も簡単</h2>
+        <p>TwitterやFacebookといったSNSと連携して、簡単にログを共有することができます。</p>
+        <%= link_to "#" do %>
+          MORE...
+          <span class="fa fa-chevron-right"></span>
+        <% end %>
+      </div>
+    </div>
+  </section>
+  <section class = "conC">
+    <div class="container">
+      <div class="photo"></div>
+      <div class="text">
+        <h2>面倒な設定やデータの管理は全部お任せ</h2>
+        <p>ライフログでつまづきがちな設定やデータ管理の煩わしさはありません。他のログアプリとの連携もワンクリックで完了です。</p>
+        <%= link_to "#" do%>
+          詳しい設定方法を確認する
+          <span class="fa fa-chevron-right"></span>
+        <% end %>
+      </div>
+    </div>
+  </section>
+  <section class = "conD">
+    <div class="container">
+      <div class="photo"></div>
+      <div class="text">
+        <h2>ライフログで毎日の日常生活をもっと楽しむ</h2>
+        <p>ふと気がつくと蓄積しているライフログ。ろぐを見返すといろいろなことが見えてきて、なんてことない日常も楽しくなってきます。</p>
+        <%= link_to "#" do%>
+          例えばこんな楽しみ方が・・・
+          <span class="fa fa-chevron-right"></span>
+        <% end %>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="footA">
+        <h2>LOGGER</h2>
+        <p>
+          〒000-0000 東京都中央区杉並3-3-3-403<br>
+          <%= link_to "http://logger.nett/" %>
+        </p>
+        <nav class="footD">
+          <ul>
+            <li>
+              <%= link_to "#" do %>
+                <span class="fab fa-twitter" title="Twitter"></span>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <span class="fab fa-facebook" title="Twitter"></span>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <span class="fab fa-instagram" title="Twitter"></span>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <span class="fab fa-google-plus" title="Twitter"></span>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <span class="fab fa-youtube" title="Twitter"></span>
+              <% end %>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <nav class="footB">
+        <div>
+          <h3>ABOUT</h3>
+          <ul>
+            <li><%= link_to "設立", "#"%></li>
+            <li><%= link_to "所在地", "#"%></li>
+            <li><%= link_to "地図", "#"%></li>
+            <li><%= link_to "スタッフ", "#"%></li>
+          </ul>
+        </div>
+        <div>
+          <h3>SUPPORT</h3>
+          <ul>
+            <li><%= link_to "ダウンロード", "#"%></li>
+            <li><%= link_to "マニュアル", "#"%></li>
+            <li><%= link_to "よくある質問", "#"%></li>
+            <li><%= link_to "お問い合わせ", "#"%></li>
+          </ul>
+        </div>
+        <div>
+          <h3>CONTENTS</h3>
+          <ul>
+            <li><%= link_to "お知らせ", "#"%></li>
+            <li><%= link_to "ビジネス", "#"%></li>
+            <li><%= link_to "プロフィール", "#"%></li>
+            <li><%= link_to "開発者", "#"%></li>
+            <li><%= link_to "ブログ", "#"%></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="footC">
+        ©︎ LOGGER corp. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
