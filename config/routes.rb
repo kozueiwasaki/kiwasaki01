@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :top, only: :index do
     collection do 
       get 'contents'
+      get 'about'
+      get 'contact'
     end
   end
 end

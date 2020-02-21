@@ -1,83 +1,3 @@
-@import "mixin/button";
-
-header{
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 100;
-	width: 100%;
-	background-color: rgba(255,255,255,0.9);
-	.container{
-		.headA{
-			display: inline-block;
-			line-height: 70px;
-			padding-left: 20px;
-			padding-right: 20px;
-			background-color: $main-color;
-			color: $white;
-			font-family: 'Montserrat', sans-serif;
-			font-size: 24px;
-			text-decoration: none;
-		}
-		.headB{
-			ul{
-				list-style: none;
-				a{
-					display: block;
-					padding: 15px;
-					color: inherit;
-					font-size: 12px;
-					text-decoration: none;
-					&:hover{
-						background-color: rgba(0,0,0,0.3);
-					}
-				}
-			}
-		}
-	}
-	@media(min-width: 768px){
-		.container{
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			max-width: 1000px;
-			margin: 0 auto;
-			.headC{
-				display: none;
-			}
-			.headB {
-				display: block !important;
-				ul{
-					display: flex;
-				}
-			}
-		}
-	}
-	@media(max-width: 767px){
-		.container-small{
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			.headC{
-				margin-right: 10px;
-				border: none;
-				outline: none;
-				background: none; 
-				font-size: 28px;
-				opacity: 0.5;
-				cursor: pointer;
-				&:hover{
-					opacity: 0.3;
-				}
-			}
-			.headB{
-				display: none;
-			}
-		}
-	}
-}
-
-
 .conA{
 	display: flex;
 	align-items: center;
@@ -107,7 +27,6 @@ header{
 	a{
 		@include buttons;
 	}
-	 /*　768px以上　*/
 	@media(min-width:768px){
 		h1{
 			font-size: 115px;
@@ -151,7 +70,7 @@ header{
 				line-height: 2em;
 				border-radius: 50%;
 				text-align: center;
-				background-color: $icon-black;
+				background-color: $gray;
 				color: $white;
 			}	
 		}
@@ -263,106 +182,3 @@ header{
 	}
 }
 
-footer{
-	color: $white;
-	background-color: $dark-main-color;
-	.container{
-		padding: 40px 20px;
-		.footA{
-			margin-bottom: 30px;
-			h2{
-				margin-bottom: 10px;
-				font-size: 30px;
-				font-family: 'Montserrat', sans-serif;
-				letter-spacing: 0.2em;
-				font-weight: bold;
-			}
-			p{
-				font-size: 14px;
-				a{
-					text-decoration: none;
-					color: inherit;
-				}
-			}
-		}
-		.footB{
-			div{
-				margin-bottom: 20px;
-				h3{
-				margin-bottom: 10px;
-				border-bottom: 1px solid currentColor;
-				font-size: 14px;
-				}
-				ul{
-					list-style: none;
-					a{
-						display: block;
-						padding: 5px;
-						color: inherit;
-						font-size: 12px;
-						text-decoration: none;
-						&:hover{
-							background-color: rgba(0,0,0,0.3);
-						}
-					}
-				}
-			}
-		}
-		.footC{
-			font-size: 12px;
-			text-align: center;
-			font-family: 'Montserrat', sans-serif;
-		}
-		.footD{
-			margin-top: 20px;
-			ul{
-				display: flex;
-				list-style: none;
-				a{
-					display: block;
-					margin-right: 8px;
-					color: inherit;
-					font-size: 16px;
-					text-decoration: none;
-					border: 1px solid currentColor;
-					width: 2em;
-					line-height: 2em;
-					border-radius: 50px;
-					text-align: center;
-					&:hover{
-						background-color: rgba(0,0,0,0.3);
-					}
-				}
-			}
-		}
-
-
-
-	}
-
-	@media(min-width: 768px){
-		.container{
-			display: flex;
-			flex-wrap: wrap;
-			max-width: 1000px;
-			margin: 0 auto;
-			.footA{
-				flex: 0 0 40%;
-			}
-			.footB{
-				display: flex;
-				flex: 0 0 60%;
-				div{
-					flex: 1;
-					&:not(:first-child){
-						margin-left: 40px;
-					}
-				}
-			}
-			.footC{
-				flex: 0 0 100%;
-			}
-		}
-	}
-
-}
