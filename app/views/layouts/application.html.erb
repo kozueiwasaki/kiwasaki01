@@ -1,15 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
+    <meta charset="UTF-8">
     <title>Kiwasaki01</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <%# <link rel="stylesheet" href="stylesheets/application.scss"> %>
+
+    <!-- アイコンに代替テキストを指定した時、それをブラウザに表示させないようにする -->
+    <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+    </style>
+
+    <script src="https://kit.fontawesome.com/341e580b4c.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   </head>
 
   <body>
+    <header>
+      <div class="container">
+        <div class="container-small">
+          <%= link_to "LOGGER", root_path, class: "headA"%>
+          <button type="button" class="headC">
+            <span class="fa fa-bars" title="MENU"></span>
+          </button>
+        </div>
+        <nav class="headB">
+          <ul>
+            <li><%= link_to "TOP", root_path %></li>
+            <li><%= link_to "CONTENTS", contents_top_index_path %></li>
+            <li><%= link_to "ABOUT", about_top_index_path %></li>
+            <li><%= link_to "CONTACT", contact_top_index_path %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
     <%= yield %>
+    
+    <footer>
+      <div class="container">
+        <div class="footA">
+          <h2>LOGGER</h2>
+          <p>
+            〒000-0000 東京都中央区杉並3-3-3-403<br>
+            <%= link_to "http://logger.nett/" %>
+          </p>
+          <nav class="footD">
+            <ul>
+              <li>
+                <%= link_to "#" do %>
+                  <span class="fab fa-twitter" title="Twitter"></span>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "#" do %>
+                  <span class="fab fa-facebook" title="Twitter"></span>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "#" do %>
+                  <span class="fab fa-instagram" title="Twitter"></span>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "#" do %>
+                  <span class="fab fa-google-plus" title="Twitter"></span>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "#" do %>
+                  <span class="fab fa-youtube" title="Twitter"></span>
+                <% end %>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <nav class="footB">
+          <div>
+            <h3>ABOUT</h3>
+            <ul>
+              <li><%= link_to "設立", articles2_top_index_path %></li>
+              <li><%= link_to "所在地", "#"%></li>
+              <li><%= link_to "地図", "#"%></li>
+              <li><%= link_to "スタッフ", "#"%></li>
+            </ul>
+          </div>
+          <div>
+            <h3>SUPPORT</h3>
+            <ul>
+              <li><%= link_to "ダウンロード", "#"%></li>
+              <li><%= link_to "マニュアル", "#"%></li>
+              <li><%= link_to "よくある質問", "#"%></li>
+              <li><%= link_to "お問い合わせ", "#"%></li>
+            </ul>
+          </div>
+          <div>
+            <h3>CONTENTS</h3>
+            <ul>
+              <li><%= link_to "お知らせ", "#"%></li>
+              <li><%= link_to "ビジネス", "#"%></li>
+              <li><%= link_to "プロフィール", "#"%></li>
+              <li><%= link_to "開発者", "#"%></li>
+              <li><%= link_to "ブログ", articles_top_index_path %></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="footC">
+          ©︎ LOGGER corp. All rights reserved.
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

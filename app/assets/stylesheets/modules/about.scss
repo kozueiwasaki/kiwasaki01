@@ -1,0 +1,53 @@
+.history{
+  background-color: $main-color;
+  color: $white;
+  .container{
+    .photo{
+      background-image: url(plant.jpg);
+			background-position: center;
+			background-size: cover;
+			min-height: 200px;
+    }
+    .text{
+      padding: 20px;
+      h2{
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      table{
+        border-collapse: collapse;
+        border-top: 1px solid $gray;
+        font-size: 0.875rem;
+        tr{
+          th,td{
+            border-bottom: 1px solid $gray;
+          }
+          th{
+            padding-right: 1rem; 
+            text-align: left;
+            word-break: keep-all;
+            font-weight: bold;
+          }
+          td{
+            padding: 1.8rem 0;
+          }
+        }
+      }
+    }
+  }
+  @media(min-width: 768px){
+    .container{
+      display: flex;
+      max-width: 1000px;
+      margin: 0 auto;
+      .photo{
+        flex: 3;
+      }
+      .text{
+        flex: 2;
+        padding: 50px;
+      }
+    }
+  }
+}
