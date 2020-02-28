@@ -5,6 +5,8 @@ Rails.application.routes.draw do
       get 'contents'
       get 'about'
       get 'contact'
+      get 'articles'
+      get 'articles2'
     end
   end
 end

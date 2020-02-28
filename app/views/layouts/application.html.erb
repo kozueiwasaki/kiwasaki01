@@ -6,9 +6,9 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <%# <link rel="stylesheet" href="stylesheets/application.scss"> %>
@@ -28,14 +28,7 @@
     </style>
 
     <script src="https://kit.fontawesome.com/341e580b4c.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-    <script>
-    $(function(){
-      $(".headC").click(function(){
-        $(".headB").slideToggle();
-      });
-    });
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   </head>
 
   <body>
@@ -102,7 +95,7 @@
           <div>
             <h3>ABOUT</h3>
             <ul>
-              <li><%= link_to "設立", "#"%></li>
+              <li><%= link_to "設立", articles2_top_index_path %></li>
               <li><%= link_to "所在地", "#"%></li>
               <li><%= link_to "地図", "#"%></li>
               <li><%= link_to "スタッフ", "#"%></li>
@@ -124,7 +117,7 @@
               <li><%= link_to "ビジネス", "#"%></li>
               <li><%= link_to "プロフィール", "#"%></li>
               <li><%= link_to "開発者", "#"%></li>
-              <li><%= link_to "ブログ", "#"%></li>
+              <li><%= link_to "ブログ", articles_top_index_path %></li>
             </ul>
           </div>
         </nav>
